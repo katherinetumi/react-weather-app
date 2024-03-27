@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import WeatherInfo from "./WeatherInfo";
+import { Audio } from "react-loader-spinner";
 import WeatherForecast from "./WeatherForecast";
 import axios from "axios";
+
 import "./Weather.css";
 
 export default function Weather(props) {
@@ -66,6 +68,16 @@ export default function Weather(props) {
     );
   } else {
     search();
-    return "Loading...";
+    return (
+      <Audio
+        height="80"
+        width="80"
+        radius="9"
+        color="green"
+        ariaLabel="loading"
+        wrapperStyle
+        wrapperClass
+      />
+    );
   }
 }
