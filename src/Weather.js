@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import WeatherInfo from "./WeatherInfo";
-import { Audio } from "react-loader-spinner";
+import { DNA } from "react-loader-spinner";
 import WeatherForecast from "./WeatherForecast";
 import axios from "axios";
 
@@ -34,7 +34,7 @@ export default function Weather(props) {
   }
 
   function search() {
-    const apiKey = "5f472b7acba333cd8a035ea85a0d4d4c";
+    const apiKey = "0efb4fc16a9ed98dc0b3aafd8491d6ad";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
   }
@@ -69,15 +69,14 @@ export default function Weather(props) {
   } else {
     search();
     return (
-      <Audio
-        height="80"
-        width="80"
-        radius="9"
-        color="green"
-        ariaLabel="loading"
-        wrapperStyle
-        wrapperClass
-      />
+      <DNA
+  visible={true}
+  height="80"
+  width="80"
+  ariaLabel="dna-loading"
+  wrapperStyle={{}}
+  wrapperClass="dna-wrapper"
+  />
     );
   }
 }
