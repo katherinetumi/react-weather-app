@@ -1,7 +1,8 @@
 .App {
   max-width: 600px;
   margin: 30px auto;
-  background-color:
+  background: rgb(238,174,202);
+  background-color: radial-;
 }
 
 .App footer {
