@@ -19,7 +19,7 @@
 }
 
 .Weather li {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 100;
     line-height: 19px;
     list-style: none;
@@ -41,7 +41,7 @@
 
 .Weather .unit {
     color: black;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 400;
     position: relative;
     line-height: 1;
